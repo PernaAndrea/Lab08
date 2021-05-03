@@ -36,6 +36,10 @@ public class FXMLController {
     @FXML
     void doAnalizzaAeroporti(ActionEvent event) {
     	//TODO
+    	model.creaGrafoN(Integer.parseInt(distanzaMinima.getText()));
+    	txtResult.setText("Number of Vertex (Airports) : "+ model.getNVertici()+"\n");
+    	txtResult.appendText("Number of Edges (Flights) : "+ model.getNArchi()+"\n");
+    	txtResult.appendText(model.creaGrafoN(Integer.parseInt(distanzaMinima.getText())));
     }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
